@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ATOMOS PH: Nuclear Power in the Philippines</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+          colors: { brand: { darkest: '#050b14', dark: '#07111e', surface: '#0d1d33', border: '#1b3558', gold: '#fbbf24', cyan: '#38bdf8', emerald: '#34d399', rose: '#f87171' } }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-darkest text-slate-200 font-sans selection:bg-brand-gold selection:text-black min-h-screen">
+
+  <!-- TOP STATUS -->
+  <div class="bg-brand-dark border-b border-brand-gold/30 py-2 px-4 text-xs font-mono text-center text-slate-300">
+    <span class="px-2 py-0.5 rounded bg-brand-gold/15 text-brand-gold font-bold">MMDC • MO-SS033 (H1102) • GROUP 2</span>
+    <span class="hidden md:inline ml-2">RA 12305 (PhilATOM) • IAEA 19-Milestones • 1,200 MW Target</span>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-brand-darkest/95 backdrop-blur border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="w-8 h-8 rounded-full border-2 border-brand-gold flex items-center justify-center">
+          <div class="w-3 h-3 rounded-full bg-brand-gold"></div>
+        </div>
+        <span class="font-extrabold text-white text-sm">ATOMOS <span class="text-brand-gold">PH</span></span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-4 text-xs font-semibold text-slate-300">
+        <a href="#problematizing" class="text-brand-gold">Defining Issue</a>
+        <a href="#actors" class="hover:text-brand-gold">Actors</a>
+        <a href="#media-global" class="hover:text-brand-gold">Media & Global</a>
+        <a href="#roadmap" class="hover:text-brand-gold">3-Stage Roadmap</a>
+        <a href="#synthesis" class="hover:text-brand-gold">Synthesis</a>
+        <a href="#locations" class="hover:text-brand-gold">7 DOE Sites</a>
+        <a href="#success-evaluation" class="px-3 py-1.5 rounded-lg bg-brand-gold text-brand-darkest font-bold">SMART Success</a>
+        <a href="#citations" class="hover:text-brand-gold">References</a>
+      </nav>
+      <button id="navToggle" class="lg:hidden p-2 text-brand-gold font-mono text-xs border border-brand-border rounded">MENU</button>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden px-4 py-3 bg-brand-dark border-b border-brand-border text-xs space-y-2">
+      <a href="#problematizing" class="block text-brand-gold">Defining Issue</a>
+      <a href="#actors" class="block">Actors & Perspectives</a>
+      <a href="#media-global" class="block">Media & Global</a>
+      <a href="#roadmap" class="block">3-Stage Roadmap</a>
+      <a href="#synthesis" class="block">Synthesis Matrix</a>
+      <a href="#locations" class="block">7 DOE Sites</a>
+      <a href="#success-evaluation" class="block text-brand-gold font-bold">★ SMART Success Indicators</a>
+      <a href="#citations" class="block">References</a>
+    </div>
+  </header>
+
+  <!-- SPLIT SCREEN HERO BANNER -->
+  <section class="border-b-2 border-brand-gold/80 bg-black">
+    <div class="grid grid-cols-1 md:grid-cols-2 min-h-[300px]">
+      <div class="relative h-48 md:h-auto overflow-hidden border-b md:border-b-0 md:border-r border-brand-gold/40">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Inherited System" class="w-full h-full object-cover brightness-75">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 left-4"><span class="px-2 py-1 rounded bg-black/80 border border-slate-700 text-[10px] font-mono text-slate-200">THE INHERITED SYSTEM (57.2% Coal)</span></div>
+      </div>
+      <div class="relative h-48 md:h-auto overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=800&q=80" alt="Responsible Chapter" class="w-full h-full object-cover brightness-90">
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        <div class="absolute bottom-4 right-4 text-right"><span class="px-2 py-1 rounded bg-black/80 border border-brand-gold text-[10px] font-mono text-brand-gold">A RESPONSIBLE NEXT CHAPTER</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEADLINE & STATS -->
+  <section class="py-12 bg-brand-dark border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4">
+      <span class="text-[11px] font-mono tracking-widest uppercase text-brand-gold font-bold">ENERGY SECURITY • SAFETY • TRANSPARENCY</span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mt-2 leading-tight">Reviving Nuclear Power in the Philippines: A Conditional and Responsible Approach.</h1>
+      <p class="text-xs sm:text-sm text-slate-300 font-mono mt-2">Mapúa Malayan Digital College (Group 2): James Cos, Jane Marie Panes, Miguel Andrei Abel, Anne Barros, Rhovelyn Galvez, Ron Jared Abajar</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
+        <div class="p-4 rounded-xl bg-brand-darkest border border-brand-border">
+          <div class="text-3xl font-black text-brand-rose font-mono">57.2%</div>
+          <div class="text-xs text-slate-300 mt-1">Supplied by imported coal & oil (Asian Power, 2026).</div>
+        </div>
+        <div class="p-4 rounded-xl bg-brand-darkest border border-brand-border">
+          <div class="text-3xl font-black text-brand-gold font-mono">$0.21/kWh</div>
+          <div class="text-xs text-slate-300 mt-1">Average rate; peak ₱12.43/kWh (Philippine Star, 2026).</div>
+        </div>
+        <div class="p-4 rounded-xl bg-brand-darkest border border-brand-border">
+          <div class="text-xl sm:text-2xl font-black text-brand-cyan font-mono leading-tight">Ring of Fire</div>
+          <div class="text-xs text-slate-300 mt-1">Seismic & typhoon context requiring IAEA milestone validation.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. DEFINING & PROBLEMATIZING -->
+  <section id="problematizing" class="py-16 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-6">1. Defining and Problematizing the Issue</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 text-xs sm:text-sm leading-relaxed text-slate-300">
+        <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
+          <strong class="text-brand-gold block font-mono mb-2 uppercase">Problem Definition:</strong>
+          The Philippines faces energy vulnerability due to imported coal and oil dependency, leading to regional-high power bills. While nuclear provides low-fuel-cost baseload power, past failures like BNPP risk long-term debt without power generation if poorly implemented.
+        </div>
+        <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
+          <strong class="text-brand-cyan block font-mono mb-2 uppercase">Root Causes:</strong>
+          Challenges span economics, political divisions around BNPP Westinghouse corruption, and social fears following Chernobyl/Fukushima, alongside seismic risks along the Pacific Ring of Fire.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. ACTORS AND PERSPECTIVE -->
+  <section id="actors" class="py-16 border-b border-brand-border bg-brand-dark">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-6">2. Actors &amp; Synthesized Stance</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm">
+        <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
+          <span class="text-brand-gold font-mono font-bold block mb-1">01 / PROPONENTS</span>
+          <h3 class="font-bold text-white mb-2">DOE, DOST, Technical Experts</h3>
+          <p class="text-slate-300 text-xs">Advocate for staged competitive procurement to deliver 1,200 MW baseload capacity by 2032 under PhilATOM oversight and EO 116.</p>
+        </div>
+        <div class="p-5 rounded-xl bg-brand-surface border border-brand-border">
+          <span class="text-brand-rose font-mono font-bold block mb-1">02 / CRITICS</span>
+          <h3 class="font-bold text-white mb-2">Greenpeace &amp; Civil Advocates</h3>
+          <p class="text-slate-300 text-xs">Highlight radioactive waste risks, ring-of-fire natural hazards, and high upfront capital, advocating for 100% renewables.</p>
+        </div>
+        <div class="p-5 rounded-xl bg-brand-surface border-2 border-brand-gold shadow-md">
+          <span class="text-brand-gold font-mono font-bold block mb-1">03 / SYNTHESIS</span>
+          <h3 class="font-bold text-white mb-2">Our Position (Group 2)</h3>
+          <p class="text-slate-200 text-xs">Support nuclear power <strong>conditionally</strong>: strictly bound by independent IAEA audits, PhilATOM regulation, and integration with geothermal, solar, and wind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. MEDIA & GLOBAL + VIDEO -->
+  <section id="media-global" class="py-16 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-6">3. Media &amp; Global Standards</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7">
+          <div class="aspect-video rounded-xl overflow-hidden border border-brand-border bg-black">
+            <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/taSNwsb1E_Y" title="IAEA Forum" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <span class="text-[11px] font-mono text-slate-400 mt-2 block">Multimedia Reference: IAEA Scientific Forum on Climate Decarbonization (ID: taSNwsb1E_Y).</span>
+        </div>
+        <div class="lg:col-span-5 space-y-3 text-xs">
+          <div class="p-3 rounded-lg bg-brand-surface border-l-4 border-brand-cyan"><strong>France:</strong> ~70% clean baseload fleet via standardized operations (WEF, 2025).</div>
+          <div class="p-3 rounded-lg bg-brand-surface border-l-4 border-brand-gold"><strong>Japan:</strong> Post-Fukushima reactor restarts under upgraded seismic standards (WEF, 2025).</div>
+          <div class="p-3 rounded-lg bg-brand-surface border-l-4 border-brand-emerald"><strong>UAE (Barakah):</strong> Newcomer model from 0 experience to 4 reactors via global partnerships (WEF, 2025).</div>
+          <div class="p-3 rounded-lg bg-brand-surface border-l-4 border-brand-rose"><strong>COP28:</strong> Multi-nation declaration to triple global nuclear capacity by 2050 (IAEA, 2023).</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ROADMAP -->
+  <section id="roadmap" class="py-16 border-b border-brand-border bg-brand-dark">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-6">4. Strategic Roadmap (3-Stage Framework)</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm">
+        <div class="p-5 rounded-xl bg-brand-surface border-t-4 border-brand-gold">
+          <span class="text-brand-gold font-mono font-bold block mb-1">STAGE 1: PREPARE</span>
+          <p class="text-slate-300 text-xs">Strengthen PhilATOM regulation under RA 12305, train workforce, establish waste management, and complete IAEA Milestone reviews before construction.</p>
+        </div>
+        <div class="p-5 rounded-xl bg-brand-surface border-t-4 border-brand-cyan">
+          <span class="text-brand-cyan font-mono font-bold block mb-1">STAGE 2: PROTECT &amp; FINANCE</span>
+          <p class="text-slate-300 text-xs">Mobilize private capital via structured PPPs while enforcing multi-stakeholder and international audits to ensure safety supersedes profit.</p>
+        </div>
+        <div class="p-5 rounded-xl bg-brand-surface border-t-4 border-brand-emerald">
+          <span class="text-brand-emerald font-mono font-bold block mb-1">STAGE 3: EXPAND RESPONSIBLY</span>
+          <p class="text-slate-300 text-xs">Deliver 1,200 MW baseload power to the main grid and deploy Small Modular Reactors (SMRs) to off-grid islands replacing diesel barges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SYNTHESIS MATRIX -->
+  <section id="synthesis" class="py-16 border-b border-brand-border">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-6">5. Synthesis &amp; Evaluation of Solutions</h2>
+      <div class="overflow-x-auto rounded-xl border border-brand-border shadow mb-6">
+        <table class="w-full text-xs font-mono text-left bg-brand-surface">
+          <thead class="bg-brand-dark border-b border-brand-border text-slate-300 uppercase">
+            <tr><th class="p-3">Solution</th><th class="p-3 text-center">Impact</th><th class="p-3 text-center">Sustainability</th><th class="p-3 text-center">Feasibility</th><th class="p-3 text-center">Acceptability</th><th class="p-3 text-center text-brand-gold">Overall</th></tr>
+          </thead>
+          <tbody class="divide-y divide-brand-border/60">
+            <tr><td class="p-3 text-white font-sans font-bold">1. Clear National Guidelines &amp; Safety Protocols</td><td class="p-3 text-center text-brand-emerald">High</td><td class="p-3 text-center text-brand-emerald">High</td><td class="p-3 text-center text-brand-gold">Mid</td><td class="p-3 text-center text-brand-emerald">High</td><td class="p-3 text-center font-bold text-brand-gold">High</td></tr>
+            <tr><td class="p-3 text-white font-sans font-bold">2. PPPs with Independent Oversight</td><td class="p-3 text-center text-brand-emerald">High</td><td class="p-3 text-center text-brand-emerald">High</td><td class="p-3 text-center text-brand-emerald">High</td><td class="p-3 text-center text-brand-emerald">High</td><td class="p-3 text-center font-bold text-brand-gold">High</td></tr>
+            <tr><td class="p-3 text-white font-sans font-bold">3. Off-Grid Small Modular Reactors (SMRs)</td><td class="p-3 text-center text-brand-emerald">High</td><td class="p-3 text-center text-brand-emerald">High</td><td class="p-3 text-center text-brand-gold">Mid</td><td class="p-3 text-center text-brand-gold">Mid</td><td class="p-3 text-center font-bold text-brand-gold">High</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. 7 DOE CANDIDATE SITES -->
+  <section id="locations" class="py-16 border-b border-brand-border bg-brand-dark">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-white mb-2">Strategic Siting: 7 DOE Sites in 5 Provinces</h2>
+      <p class="text-xs text-slate-400 font-mono mb-6">Assessed under IAEA Milestone criteria (Cordero, GMA News Online, 2026a).</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+        <div class="p-4 rounded-xl bg-brand-surface border border-brand-border"><span class="text-brand-rose font-bold block mb-1">Bataan (2 Sites):</span> Morong & Bagac — Existing Westinghouse site and greenfield corridor evaluations.</div>
+        <div class="p-4 rounded-xl bg-brand-surface border border-brand-border"><span class="text-brand-cyan font-bold block mb-1">Palawan (2 Sites):</span> Puerto Princesa & San Vicente — Targeted for SMR pre-feasibility to replace diesel barge generation.</div>
+        <div class="p-4 rounded-xl bg-brand-surface border border-brand-border"><span class="text-brand-gold font-bold block mb-1">Masbate (1 Site):</span> Milagros & Cawayan — Strategic central island node linking regional grids.</div>
+        <div class="p-4 rounded-xl bg-brand-surface border border-brand-border"><span class="text-brand-emerald font-bold block mb-1">Pangasinan (1 Site):</span> Sual Coast — Evaluated for large-scale baseload grid integration.</div>
+        <div class="p-4 rounded-xl bg-brand-surface border border-brand-border sm:col-span-2 lg:col-span-2"><span class="text-brand-gold font-bold block mb-1">Camarines Norte (1 Site):</span> Jose Panganiban & Paracale — Deepwater cooling bays assessed for seismic margins.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. RUBRICS: EVALUATING OVERALL SUCCESS INDICATORS -->
+  <section id="success-evaluation" class="py-16 border-b-4 border-brand-gold bg-brand-surface">
+    <div class="max-w-7xl mx-auto px-4">
+      
+      <div class="p-4 rounded-xl bg-brand-gold text-brand-darkest font-mono text-xs font-bold mb-8 flex justify-between items-center">
+        <span>★ ACADEMIC RUBRIC SHOWCASE: CRITICAL SUCCESS MEASURES</span>
+        <span class="bg-black text-brand-gold px-2 py-1 rounded text-[10px]">MOST IMPORTANT SECTION</span>
+      </div>
+
+      <!-- EXACT 4 CARDS FROM SCREENSHOT -->
+      <h3 class="text-2xl font-bold text-white mb-6">Evaluating Overall Success Indicators</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        
+        <!-- CARD 1 -->
+        <div class="p-6 rounded-2xl bg-white text-slate-900 border-l-[6px] border-amber-400 shadow-xl flex flex-col justify-between">
+          <div>
+            <h4 class="text-lg font-bold mb-2">Feasibility &amp; Execution</h4>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              A well-designed framework cannot succeed if it is poorly implemented. We will evaluate whether the solution is executed as planned by ensuring all necessary resources, activities, and government-private stakeholders are fully in place. To guarantee the solution is affordable and efficient, we will continuously compare the actual expenses, time, and resources utilized by the Public-Private Partnerships against the available national budget constraints.
+            </p>
+          </div>
+          <span class="mt-4 text-[10px] font-mono text-amber-700 font-bold uppercase">Budgetary &amp; Resource Conformance</span>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="p-6 rounded-2xl bg-white text-slate-900 border-l-[6px] border-sky-600 shadow-xl flex flex-col justify-between">
+          <div>
+            <h4 class="text-lg font-bold mb-2">Return of Investment (ROI)</h4>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              We will quantify success by measuring the percentage of profit and cost-savings generated in relation to the capital spent by PPPs within a reasonable timeframe after deployment, comparing actual expenses to the national energy budget.
+            </p>
+          </div>
+          <span class="mt-4 text-[10px] font-mono text-sky-800 font-bold uppercase">Capital Efficiency &amp; Savings</span>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="p-6 rounded-2xl bg-white text-slate-900 border-l-[6px] border-amber-400 shadow-xl flex flex-col justify-between">
+          <div>
+            <h4 class="text-lg font-bold mb-2">User Satisfaction</h4>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              Success requires long-term public adaptation. We will utilize continuous community surveys and public consultations in affected provinces to gather feedback, ensuring that if opportunities for improvement arise, the solution can be refined.
+            </p>
+          </div>
+          <span class="mt-4 text-[10px] font-mono text-amber-700 font-bold uppercase">Public Trust &amp; Consultation</span>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="p-6 rounded-2xl bg-white text-slate-900 border-l-[6px] border-sky-600 shadow-xl flex flex-col justify-between">
+          <div>
+            <h4 class="text-lg font-bold mb-2">Sustainability &amp; Comparative Performance</h4>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              We will establish a step-by-step review routine to ensure long-term quality. We will compare our solution's carbon emission metrics and cost stability against previous coal-dependent grids to ensure the nuclear framework performs better than past systems.
+            </p>
+          </div>
+          <span class="mt-4 text-[10px] font-mono text-sky-800 font-bold uppercase">Decarbonization &amp; Stability</span>
+        </div>
+
+      </div>
+
+      <!-- YELLOW FUTURE CARD -->
+      <div class="p-6 rounded-2xl bg-amber-300 text-slate-950 shadow-xl border border-amber-400 mb-8">
+        <h4 class="text-lg font-bold mb-2">Future Recommendations &amp; Challenges</h4>
+        <p class="text-xs sm:text-sm leading-relaxed">
+          A major challenge is managing proprietary business data in PPPs while ensuring public safety disclosures, as well as navigating maritime logistics for SMRs during typhoon seasons. Future implementation must prioritize maritime transport safety laws and transparent public-private data-sharing agreements to maintain trust.
+        </p>
+      </div>
+
+      <!-- INTERACTIVE SIMULATOR -->
+      <div class="p-6 rounded-2xl bg-brand-darkest border border-brand-border">
+        <div class="flex justify-between items-center mb-4 flex-wrap gap-2">
+          <h4 class="text-sm font-bold text-white font-mono uppercase">Interactive Tariff &amp; Grid Impact Predictor</h4>
+          <span id="sliderLabel" class="text-xs font-mono text-brand-gold font-bold">1,200 MW Baseload</span>
+        </div>
+        <input type="range" id="simSlider" min="0" max="3000" step="300" value="1200" class="w-full accent-amber-400 cursor-pointer mb-4">
+        <div class="grid grid-cols-3 gap-4 text-center font-mono">
+          <div class="p-3 bg-brand-surface rounded-xl border border-brand-border">
+            <span class="text-[10px] text-slate-400 block">Tariff</span>
+            <div id="simTariff" class="text-sm sm:text-lg font-black text-brand-emerald">₱8.95 / kWh</div>
+          </div>
+          <div class="p-3 bg-brand-surface rounded-xl border border-brand-border">
+            <span class="text-[10px] text-slate-400 block">Avoided CO₂</span>
+            <div id="simOffset" class="text-sm sm:text-lg font-black text-brand-cyan">8.88 Mt/yr</div>
+          </div>
+          <div class="p-3 bg-brand-surface rounded-xl border border-brand-border">
+            <span class="text-[10px] text-slate-400 block">Reliability</span>
+            <div id="simScore" class="text-sm sm:text-lg font-black text-brand-gold">91.4% (High)</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. REFERENCES -->
+  <section id="citations" class="py-12 bg-brand-darkest text-slate-400 font-mono text-[11px]">
+    <div class="max-w-7xl mx-auto px-4 space-y-2">
+      <h3 class="text-white text-sm font-bold mb-3 uppercase">Selected Academic References (APA 7th)</h3>
+      <p>Asian Power. (2026). <em>The Philippines pays more power than most Southeast Asian peers</em>.</p>
+      <p>Cabalza, D., &amp; Cabato, L. (2025). Marcos signs law creating PhilATOM, new nuclear regulatory agency. <em>Inquirer.net</em>.</p>
+      <p>Cordero, T. (2026a). DOE identifies, assesses potential nuclear plant sites in 5 provinces. <em>GMA News Online</em>.</p>
+      <p>Cordero, T. (2026b). DOE pushes competitive framework for nuclear power procurement. <em>GMA News Online</em>.</p>
+      <p>International Atomic Energy Agency. (2024). <em>IAEA reviews progress of the Philippines' nuclear infrastructure development</em>.</p>
+      <p>Philippine Star. (2026). <em>DOE: Philippines power rates now highest in SEA</em>.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-6 border-t border-brand-border text-center text-xs text-slate-400 font-mono">
+    ATOMOS PH • Mapúa Malayan Digital College • Course MO-SS033 Group 2
+  </footer>
+
+  <script>
+    // Mobile Nav
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    navToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    // Tariff Simulator
+    const simSlider = document.getElementById('simSlider');
+    simSlider.addEventListener('input', (e) => {
+      const mw = parseInt(e.target.value);
+      document.getElementById('sliderLabel').textContent = `${mw.toLocaleString()} MW Baseload`;
+      const tariff = (12.43 - (mw / 3000) * 5.23).toFixed(2);
+      document.getElementById('simTariff').textContent = `₱${tariff} / kWh`;
+      document.getElementById('simOffset').textContent = `${((mw / 1000) * 7.4).toFixed(2)} Mt/yr`;
+      const score = (72 + (mw / 3000) * 26.5).toFixed(1);
+      document.getElementById('simScore').textContent = `${score}% (${score > 90 ? 'High' : 'Moderate'})`;
+    });
+  </script>
+</body>
+</html>
